@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Website - Trainers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.6rem;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #007bff, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      color: #007bff;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .trainers img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .trainers img:hover {
+      transform: scale(1.03);
+    }
+
+    .trainer-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .trainer-box:hover {
+      box-shadow: 0 6px 16px rgba(0, 123, 255, 0.15);
+    }
+    footer {
+      background-color: #111;
+    }
+
+    footer a {
+      color: #00c6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .trainers {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Iron Pulse Gym</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="trainers.html">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="trainers">
+    <div class="container">
+      <h1 class="text-center">Meet Our Trainers</h1>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="trainer-box text-center">
+            <img src="Mike Brown.jpg" alt="John Smith">
+            <h3>John Smith</h3>
+            <p>Expert in weightlifting and bodybuilding with over 10 years of experience.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trainer-box text-center">
+            <img src="Lisa Johnson.jpg" alt="Lisa Johnson">
+            <h3>Lisa Johnson</h3>
+            <p>Certified yoga instructor specializing in flexibility and mindfulness.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trainer-box text-center">
+            <img src="john smith.jpg" alt="Mike Brown">
+            <h3>Mike Brown</h3>
+            <p>Cardio and HIIT coach helping clients improve endurance and burn fat efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-white text-center py-4">
+    <p>&copy; 2025 Iron Pulse Gym| Follow us on
+      <a href="#">Instagram</a>, <a href="#">Facebook</a>
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

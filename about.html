@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Website - About Us</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    /* Section Heading */
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, #007bff, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      color: #007bff;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Image Styling */
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .about h4 {
+      margin-top: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+    }
+
+    footer a {
+      color: #00c6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Responsive Padding */
+    .about {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Iron Pulse Gym</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="about text-center">
+    <div class="container">
+      <h1>About Us</h1>
+      <p class="mb-4">We are a community-focused gym that provides top-of-the-line equipment, personalized training programs, and a friendly atmosphere to help you reach your fitness goals.</p>
+      <div class="my-5">
+        <h4 class="mb-3">🎥 Watch: Build Your Best Workout Week</h4>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/U0bhE67HuDY" 
+                  title="How to Build Your Best Workout Week - 3 Day, 4 Day, 5 Day Split"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+          <img src="cardion section.jpg" alt="Cardio Section">
+          <h4>Cardio Section</h4>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="weight room.jpg" alt="Weight Room">
+          <h4>Weight Room</h4>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="yoga21.jpg" alt="Yoga Room">
+          <h4>Yoga Room</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-white text-center py-4">
+    <p>&copy; 2025 Iron Pulse Gym | Follow us on
+      <a href="#">Instagram</a>, <a href="#">Facebook</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

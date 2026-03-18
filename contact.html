@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gym Website - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    /* Error message style */
+    .error {
+      color: #e74c3c;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Main Heading Style */
+    .contact h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      background: linear-gradient(45deg, #007bff, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    /* Subheading style */
+    .location-title {
+      color: #2c3e50;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    /* Paragraphs (address, email, phone) */
+    .contact p {
+      color: #4a4a4a;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Input and textarea */
+    .form-control {
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0,123,255,0.25);
+    }
+
+    /* Submit button */
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Section background */
+    .contact {
+      background-color: #f8f9fa;
+    }
+
+    /* Footer links */
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Iron Pulse Gym</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+        <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+        <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact py-5">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <div class="row mt-4">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+            <div class="error" id="nameError"></div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email">
+            <div class="error" id="emailError"></div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+            <div class="error" id="messageError"></div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <h3 class="location-title">Visit Us</h3>
+        <p>🏋️ 123 Gym St, Fitness City, 45678</p>
+        <p>📧 Email: <a href="mailto:contact@gymname.com">contact@gymname.com</a></p>
+        <p>📞 Phone: +123-456-7890</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="bg-dark text-white text-center py-4">
+  <p>&copy; 2025 Iron Pulse Gym | Follow us on
+    <a href="#" class="text-white">Instagram</a>,
+    <a href="#" class="text-white">Facebook</a>
+  </p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Clear errors
+    document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    let isValid = true;
+
+    const nameRegex = /^[A-Za-z ]{3,}$/;
+    if (!name) {
+      document.getElementById('nameError').textContent = 'Please enter your name.';
+      isValid = false;
+    } else if (!nameRegex.test(name)) {
+      document.getElementById('nameError').textContent = 'Name must be at least 3 letters and only letters/spaces.';
+      isValid = false;
+    }
+
+    const emailRegex = /^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i;
+    if (!email) {
+      document.getElementById('emailError').textContent = 'Please enter your email.';
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+      isValid = false;
+    }
+
+    if (!message) {
+      document.getElementById('messageError').textContent = 'Please enter your message.';
+      isValid = false;
+    } else if (message.length < 10) {
+      document.getElementById('messageError').textContent = 'Message must be at least 10 characters long.';
+      isValid = false;
+    }
+
+    if (isValid) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Thanks for contacting us. We will get back to you soon.',
+        confirmButtonColor: '#3085d6'
+      });
+
+      document.getElementById('contactForm').reset();
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Website - Classes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Navbar brand */
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.6rem;
+    }
+
+    /* Heading */
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #007bff, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.text-center.mb-5 {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Card styling */
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
+    }
+
+    .card img {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      color: #007bff;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+    }
+
+    footer a {
+      color: #00c6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .classes {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Iron Pulse Gym</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="classes">
+    <div class="container">
+      <h1 class="text-center">Our Classes</h1>
+      <p class="text-center mb-5">We offer a wide range of fitness classes to cater to all fitness levels and preferences.</p>
+
+      <div class="row g-4">
+    
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="yoga01.jpg" alt="Yoga Class">
+            <div class="card-body">
+              <h5 class="card-title">Yoga</h5>
+              <p class="card-text">Improve your flexibility, balance, and strength through our yoga sessions. Suitable for all levels.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="waight02.jpg" alt="Weight Training">
+            <div class="card-body">
+              <h5 class="card-title">Weight Training</h5>
+              <p class="card-text">Build muscle and strength with our weight training classes, led by professional trainers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cardio -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="cardio24.jpg" alt="Cardio Class">
+            <div class="card-body">
+              <h5 class="card-title">Cardio</h5>
+              <p class="card-text">Boost your endurance and burn calories with our high-energy cardio classes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="spin01.jpg" alt="Spin Class">
+            <div class="card-body">
+              <h5 class="card-title">Spin Class</h5>
+              <p class="card-text">Join our high-intensity spin classes to improve your cardiovascular fitness and tone muscles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="boxing01.jpg" alt="Boxing Class">
+            <div class="card-body">
+              <h5 class="card-title">Boxing</h5>
+              <p class="card-text">Enhance your coordination, strength, and endurance with our boxing fitness sessions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="pilates01.jpg" alt="Pilates Class">
+            <div class="card-body">
+              <h5 class="card-title">Pilates</h5>
+              <p class="card-text">Increase core strength and improve posture with our Pilates classes, perfect for all fitness levels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-white text-center py-4">
+    <p>&copy; 2025 Iron Pulse Gym| Follow us on
+      <a href="#">Instagram</a>, <a href="#">Facebook</a>
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
